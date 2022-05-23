@@ -24,7 +24,7 @@ class KanjiListAPIView(generics.ListAPIView):
             queryset = Kanji.objects.raw(filter_search[:-3])
             return queryset
         else:
-            raise self.ValidationError("not a number")
+            return redirect("/home")
 
 class KanjiGradeGetAPIView(generics.CreateAPIView):
     queryset = Kanji.objects.all()
