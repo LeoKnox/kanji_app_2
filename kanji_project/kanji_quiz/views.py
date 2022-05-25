@@ -18,13 +18,10 @@ class KanjiListAPIView(generics.ListAPIView):
     def get_queryset(self):
         filter_search = "SELECT * FROM kanji_app_db.kanji_dict WHERE "
         grade = self.kwargs['grade']
-        if grade.isnumeric():
-            for g in grade:
-                filter_search += "grade={} OR ".format(g)
-            queryset = Kanji.objects.raw(filter_search[:-3])
-            return queryset
-        else:
-            return redirect("/home")
+        for g in grade:
+            filter_search += "grade={} OR ".format(g)
+        queryset = Kanji.objects.raw(filter_search[:-3])
+        return queryset
 
 class KanjiGradeGetAPIView(generics.CreateAPIView):
     queryset = Kanji.objects.all()
