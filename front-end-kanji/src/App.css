@@ -149,7 +149,7 @@ footer {
 
 /* On mouse-over, add a grey background color */
 .container input:hover ~ .checkmark {
-  background-color: #ccc;
+  background-color: lightskyblue;
 }
 
 .container .selectGrade:hover {
