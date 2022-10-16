@@ -7,6 +7,10 @@ const Index = () => {
 
     function setGrade(e) {
         console.log(e.target.value);
+        let gradeArray = grades;
+        gradeArray[e.target.value] = e.target.checked;
+        setGrades(gradeArray);
+        console.log(grades);
     }
 
     return (
@@ -14,9 +18,9 @@ const Index = () => {
         <h1>Index</h1>
         <div id="horz-list">
             <ul>
-                {numbers.map((number) => (
+                {numbers.map((number, index) => (
                     <li>
-                        <input type="checkbox" value={number} onClick={setGrade} />
+                        <input type="checkbox" value={index} onClick={setGrade} />
                         {number}
                     </li>
                 ))}
