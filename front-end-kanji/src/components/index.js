@@ -6,7 +6,6 @@ const Index = () => {
     const [grades, setGrades] = useState([]);
 
     function setGrade(e) {
-        console.log(e.target.value);
         let gradeArray = grades;
         gradeArray[e.target.value] = e.target.checked;
         setGrades(gradeArray);
