@@ -1,7 +1,13 @@
+import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 
 const Index = () => {
     const numbers = [1, 2, 3, 4];
+    const [grades, setGrades] = useState([]);
+
+    function setGrade(e) {
+        console.log(e.target.value);
+    }
 
     return (
         <>
@@ -10,7 +16,7 @@ const Index = () => {
             <ul>
                 {numbers.map((number) => (
                     <li>
-                        <input type="checkbox" />
+                        <input type="checkbox" value={number} onClick={setGrade} />
                         {number}
                     </li>
                 ))}
