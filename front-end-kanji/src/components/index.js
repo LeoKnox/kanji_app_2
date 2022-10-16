@@ -4,10 +4,12 @@ const Index = () => {
     return (
         <>
         <h1>Index</h1>
-        <ul id="horz-list">
-            <li>one</li>
-            <li>two</li>
-        </ul>
+        <div id="horz-list">
+            <ul>
+                <li>one</li>
+                <li>two</li>
+            </ul>
+        </div>
         <Outlet />
         </>
     )
