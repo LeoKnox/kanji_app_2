@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 const review = () => {
-    let grades = useParams();
+    const { grades } = useParams();
 
     return (
         <h3>now review {grades}</h3>
