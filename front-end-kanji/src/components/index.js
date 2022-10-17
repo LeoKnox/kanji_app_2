@@ -14,12 +14,12 @@ const Index = () => {
         console.log(grades);
     }
 
+    // FUTURE change axios call to return array not array of objects
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/g/') 
             .then(function (response) {
                 let beginGrades = [];
                 response.data.map((i) => beginGrades.push(i.grade));
-                console.log(beginGrades);
                 setNumbers(beginGrades);
             })
             .catch(function (error) {
