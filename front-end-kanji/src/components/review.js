@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-const review = () => {
+function Review() {
     const { grades } = useParams();
 
     return (
@@ -8,4 +8,4 @@ const review = () => {
     )
 }
 
-export default review;
+export default Review;
