@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
-function Review() {
-    const { grades } = useParams();
+const review = (match) => {
+    const grades = match.params;
 
     console.log("****"+grades);
 
@@ -10,4 +10,4 @@ function Review() {
     )
 }
 
-export default Review;
+export default review;
