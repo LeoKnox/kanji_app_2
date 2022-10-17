@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
-const review = (match) => {
-    const grades = match.params;
+const review = ({grades}) => {
+    //const grades = match.params;
 
     console.log("****"+grades);
 
