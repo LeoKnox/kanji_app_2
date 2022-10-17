@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const Index = () => {
-    const numbers = [1, 2, 3, 4];
+    //const numbers = [1, 2, 3, 4];
+    const [numbers, setNumbers] = useState([]);
     const [grades, setGrades] = useState([]);
 
     function setGrade(e) {
@@ -11,6 +13,19 @@ const Index = () => {
         setGrades(gradeArray);
         console.log(grades);
     }
+
+    useEffect(() => {
+        axios.get('http://127.0.0.1:8000/g/') 
+            .then(function (response) {
+                let beginGrades = [];
+                response.data.map((i) => beginGrades.i.grade);
+                console.log(beginGrades);
+                setNumbers(beginGrades);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }, [])
 
     return (
         <>
