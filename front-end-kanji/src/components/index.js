@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Index = () => {
@@ -7,10 +7,11 @@ const Index = () => {
     const [numbers, setNumbers] = useState([]);
     const [grades, setGrades] = useState([]);
 
-    function setGrade(e) {
+    function SetGrade(e) {
         let gradeArray = grades;
         gradeArray[e.target.value] = e.target.checked;
         setGrades(gradeArray);
+        useNavigate(`review/1`);
         console.log(grades);
     }
 
@@ -34,7 +35,7 @@ const Index = () => {
             <ul>
                 {numbers.map((number, index) => (
                     <li>
-                        <input type="checkbox" value={index} onClick={setGrade} />
+                        <input type="checkbox" value={index} onClick={SetGrade} />
                         {number}
                     </li>
                 ))}
