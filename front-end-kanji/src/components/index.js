@@ -18,7 +18,7 @@ const Index = () => {
         axios.get('http://127.0.0.1:8000/g/') 
             .then(function (response) {
                 let beginGrades = [];
-                response.data.map((i) => beginGrades.i.grade);
+                response.data.map((i) => beginGrades.push(i.grade));
                 console.log(beginGrades);
                 setNumbers(beginGrades);
             })
