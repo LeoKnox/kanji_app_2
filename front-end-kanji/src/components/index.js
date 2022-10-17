@@ -12,7 +12,9 @@ const Index = () => {
         let gradeArray = grades;
         gradeArray[e.target.value] = e.target.checked;
         setGrades(gradeArray);
-        navigate(`/index/review/1`);
+        let newGrades = "";
+        gradeArray.map((g) => newGrades += g);
+        navigate(`/index/review/${newGrades}`);
         console.log(grades);
     }
 
