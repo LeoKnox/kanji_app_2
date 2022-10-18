@@ -13,7 +13,9 @@ const Index = () => {
         gradeArray[e.target.value] = e.target.checked;
         setGrades(gradeArray);
         let newGrades = "";
-        let newArray = gradeArray.filter((g) => g);
+        const newArray = gradeArray.reduce(
+            (grade, bool, index) => bool ? grade.concat(index) : grade, []
+        )
         navigate(`/index/review/${newGrades}`);
         console.log(newArray);
     }
