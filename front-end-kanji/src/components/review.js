@@ -9,6 +9,7 @@ const Review = () => {
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
+        console.log("+++++" + allKanji[3].grade);
         axios.get(x)
             .then(function (response) {
                 setAllKanji(response.data);
