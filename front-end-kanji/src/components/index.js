@@ -13,9 +13,9 @@ const Index = () => {
         gradeArray[e.target.value] = e.target.checked;
         setGrades(gradeArray);
         let newGrades = "";
-        gradeArray.filter((g, i) => g ? newGrades += (i+1) : null);
+        let newArray = gradeArray.filter((g) => g);
         navigate(`/index/review/${newGrades}`);
-        console.log(grades);
+        console.log(newArray);
     }
 
     // FUTURE change axios call to return array not array of objects
