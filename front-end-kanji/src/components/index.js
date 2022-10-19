@@ -17,7 +17,7 @@ const Index = () => {
         const newArray = gradeArray.reduce(
             (grade, index) => console.log(grade + " " + index)
         )
-        navigate(`/index/review/${newGrades}`);
+        //navigate(`/index/review/${newGrades}`);
         console.log(newArray);
     }
 
@@ -32,7 +32,7 @@ const Index = () => {
             .catch(function (error) {
                 console.log(error);
             })
-    }, [])
+    }, [grades])
 
     return (
         <>
