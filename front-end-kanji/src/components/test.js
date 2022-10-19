@@ -1,5 +1,7 @@
-const test = () => {
-    <h3>test component</h3>
+const Test = () => {
+    return (
+        <h3>test component</h3>
+    )
 }
 
-export default test;
+export default Test;
