@@ -47,7 +47,7 @@ const Index = () => {
                 ))}
             </ul>
         </div>
-        <Test />
+        <Test peas={grades} />
         <Outlet />
         </>
     )
