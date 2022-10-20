@@ -18,9 +18,9 @@ const Index = () => {
         const newArray = gradeArray.reduce(
             (grade, index, value) => console.log(grade + ":=:" + value + ":" + index)
         )*/
-        gradeArray.map((first, second) => (first ? console.log("true") : console.log("false")));
+        gradeArray.map((value, index) => (value ? newGrades += index : null));
         //navigate(`/index/review/${newGrades}`);
-        //console.log(newArray);
+        console.log(newGrades);
     }
 
     // FUTURE change axios call to return array not array of objects
