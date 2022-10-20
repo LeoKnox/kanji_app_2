@@ -11,6 +11,8 @@ const Index = () => {
 
     function SetGrade(e) {
         let gradeArray = grades;
+        console.log("****");
+        console.log(JSON.stringify(gradeArray));
         let newGrades = "";
         //gradeArray.map((value, index) => (value ? newGrades += index : null));
         gradeArray.map((value, index) => (console.log(value+":=:"+index)));
