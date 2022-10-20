@@ -18,7 +18,7 @@ const Index = () => {
         const newArray = gradeArray.reduce(
             (grade, index, value) => console.log(grade + ":=:" + value + ":" + index)
         )*/
-        gradeArray.map((first, second) => console.log(first+":=:"+second));
+        gradeArray.map((first, second) => (first ? console.log("true") : console.log("false")));
         //navigate(`/index/review/${newGrades}`);
         //console.log(newArray);
     }
