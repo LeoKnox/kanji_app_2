@@ -11,6 +11,7 @@ const Index = () => {
 
     function SetGrade(e) {
         let gradeArray = grades;
+        console.log("!!!!"+e.target.value);
         console.log("****");
         console.log(JSON.stringify(gradeArray));
         let newGrades = "";
