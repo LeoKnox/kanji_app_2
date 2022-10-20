@@ -15,7 +15,7 @@ const Index = () => {
         setGrades(gradeArray);
         let newGrades = "";
         const newArray = gradeArray.reduce(
-            (grade, index) => console.log(grade + " " + index)
+            (grade, index, value) => console.log(grade + ":=:" + index + ":" + third)
         )
         //navigate(`/index/review/${newGrades}`);
         console.log(newArray);
