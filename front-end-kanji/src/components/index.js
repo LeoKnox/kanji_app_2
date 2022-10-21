@@ -13,12 +13,13 @@ const Index = () => {
         let gradeArray = grades;
         console.log("!!!!"+e.target.value);
         console.log("****");
-        console.log(gradeArray);
         console.log("@@@"+e.target.checked);
         let newGrades = "";
+        e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         //gradeArray.map((value, index) => (value ? newGrades += index : null));
         //gradeArray.map((value, index) => (console.log(value+":=:"+index)));
-        setGrades(newGrades);
+        setGrades(gradeArray);
+        console.log(gradeArray);
     }
 
     // FUTURE change axios call to return array not array of objects
