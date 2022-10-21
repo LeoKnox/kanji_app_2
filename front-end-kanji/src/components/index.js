@@ -11,13 +11,7 @@ const Index = () => {
 
     function SetGrade(e) {
         let gradeArray = grades;
-        console.log("!!!!"+e.target.value);
-        console.log("****");
-        console.log("@@@"+e.target.checked);
-        let newGrades = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
-        //gradeArray.map((value, index) => (value ? newGrades += index : null));
-        //gradeArray.map((value, index) => (console.log(value+":=:"+index)));
         setGrades(gradeArray);
         console.log(gradeArray);
     }
