@@ -43,7 +43,7 @@ const Index = () => {
                 ))}
             </ul>
         </div>
-        <Test peas={grades} />
+        {grades && <Test peas={grades} />}
         <Outlet />
         </>
     )
