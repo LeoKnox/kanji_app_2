@@ -13,7 +13,6 @@ const Index = () => {
         let gradeArray = grades;
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        console.log(gradeArray);
         return (<Test peas={grades} />);
     }
 
