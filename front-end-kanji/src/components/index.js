@@ -13,10 +13,11 @@ const Index = () => {
         let gradeArray = grades;
         console.log("!!!!"+e.target.value);
         console.log("****");
-        console.log(JSON.stringify(gradeArray));
+        console.log(gradeArray);
+        console.log("@@@"+e.target.checked);
         let newGrades = "";
         //gradeArray.map((value, index) => (value ? newGrades += index : null));
-        gradeArray.map((value, index) => (console.log(value+":=:"+index)));
+        //gradeArray.map((value, index) => (console.log(value+":=:"+index)));
         setGrades(newGrades);
     }
 
@@ -31,7 +32,7 @@ const Index = () => {
             .catch(function (error) {
                 console.log(error);
             })
-    }, [grades])
+    }, [])
 
     return (
         <>
