@@ -13,11 +13,10 @@ const Index = () => {
         let gradeArray = grades;
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        return (<Test peas={grades} />);
     }
 
     function UpdateComponent() {
-        return (<p>test</p>);
+        return (<Test peas={grades} />);
     }
 
     // FUTURE change axios call to return array not array of objects
