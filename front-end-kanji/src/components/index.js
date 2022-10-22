@@ -16,6 +16,10 @@ const Index = () => {
         return (<Test peas={grades} />);
     }
 
+    function UpdateComponent() {
+        return (<p>test</p>);
+    }
+
     // FUTURE change axios call to return array not array of objects
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/g/') 
@@ -42,7 +46,8 @@ const Index = () => {
                 ))}
             </ul>
         </div>
-        {grades && <Test peas={grades} />}
+        {null && <Test peas={grades} />}
+        {UpdateComponent}
         <Outlet />
         </>
     )
