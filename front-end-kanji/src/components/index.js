@@ -13,6 +13,7 @@ const Index = () => {
         let gradeArray = grades;
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
+        navigate('/index/review/1223');
     }
 
     function UpdateComponent(e) {
@@ -49,7 +50,7 @@ const Index = () => {
         </div>
         {{grades} && <Test grades={grades} />}
         <UpdateComponent />
-        <Outlet grades={grades} />
+        <Outlet />
         </>
     )
 }
