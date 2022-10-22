@@ -47,8 +47,8 @@ const Index = () => {
                 ))}
             </ul>
         </div>
-        {grades && <Test grades={grades} />}
-        {null && <Test peas={grades} />}
+        {null && <Test grades={grades} />}
+        <Test grades={grades} />
         <UpdateComponent />
         <Outlet />
         </>
