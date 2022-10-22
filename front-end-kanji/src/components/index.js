@@ -16,7 +16,7 @@ const Index = () => {
         setGrades(gradeArray);
         gradeArray.map((v, i) =>v ? nums += i : null);
         console.log("nums" + nums);
-        navigate('/index/review/1223');
+        navigate(`/index/review/${nums}`);
     }
 
     function UpdateComponent(e) {
