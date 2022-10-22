@@ -15,7 +15,9 @@ const Index = () => {
         setGrades(gradeArray);
     }
 
-    function UpdateComponent() {
+    function UpdateComponent(e) {
+        e.preventDefault();
+        setGrades([true])
         return (<Test peas={grades} />);
     }
 
