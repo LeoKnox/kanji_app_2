@@ -7,7 +7,8 @@ const Review = (test) => {
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
 
-    console.log(test[0] ? console.log("r true") : console.log("r false"));
+    //console.log(test.grades[0] ? console.log("r true") : console.log("r false"));
+    console.log(JSON.stringify(test));
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
