@@ -14,7 +14,7 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        gradeArray.map((v, i) =>v ? nums += i : null);
+        gradeArray.map((v, i) =>v ? nums += i+1 : null);
         navigate(`/index/review/${nums}`);
     }
 
