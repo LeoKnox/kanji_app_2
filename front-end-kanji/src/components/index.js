@@ -16,9 +16,9 @@ const Index = () => {
     }
 
     function UpdateComponent(e) {
-        e.preventDefault();
-        setGrades([true])
-        return (<Test peas={grades} />);
+        //e.preventDefault();
+        //setGrades([true])
+        //return (<Test peas={grades} />);
     }
 
     // FUTURE change axios call to return array not array of objects
@@ -47,6 +47,7 @@ const Index = () => {
                 ))}
             </ul>
         </div>
+        {grades && <Test grades={grades} />}
         {null && <Test peas={grades} />}
         <UpdateComponent />
         <Outlet />
