@@ -8,7 +8,6 @@ const Review = (test) => {
     const [allKanji, setAllKanji] = useState([]);
 
     //console.log(test.grades[0] ? console.log("r true") : console.log("r false"));
-    console.log(JSON.stringify(test));
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
@@ -23,11 +22,17 @@ const Review = (test) => {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 setQuiz(quizList);
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
+                console.log(quizList);
             })
         }, [grades.id]);
 
     return (
+        <>
         <h3>now review</h3>
+        {quiz.map((i) => (
+            <p>{i.kanji}</p>
+        ))}
+        </>
     )
 }
 
