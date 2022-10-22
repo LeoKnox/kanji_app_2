@@ -2,10 +2,12 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Review = () => {
+const Review = (test) => {
     const grades = useParams();
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
+
+    console.log(test[0] ? console.log("r true") : console.log("r false"));
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
