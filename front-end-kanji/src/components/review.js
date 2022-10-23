@@ -29,7 +29,7 @@ const Review = (test) => {
         }
 
     return (
-        <div className="kanjiWrapper">
+        <div className="indexWrapper">
         {quiz.map((i) => (
             <p className="kanjiCube">{i.kanji}</p>
         ))}
