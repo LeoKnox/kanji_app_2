@@ -39,7 +39,6 @@ const Index = () => {
 
     return (
         <>
-        <h1>Index</h1>
         <div id="horz-list">
             <ul>
                 {numbers.map((number, index) => (
@@ -50,6 +49,7 @@ const Index = () => {
                 ))}
             </ul>
         </div>
+        <h1 id="kanjiTitle">Kanji Trainer</h1>
         <Outlet />
         </>
     )
