@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Footer from "./footer.js";
 import Test from './test.js';
 
 const Index = () => {
@@ -51,6 +52,7 @@ const Index = () => {
         </div>
         <h1 id="kanjiTitle">Kanji Trainer</h1>
         <Outlet />
+        <Footer />
         </>
     )
 }
