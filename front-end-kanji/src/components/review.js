@@ -29,12 +29,11 @@ const Review = (test) => {
         }
 
     return (
-        <>
-        <h3>now review</h3>
+        <div className="kanjiWrapper">
         {quiz.map((i) => (
-            <p>{i.kanji}</p>
+            <p className="kanjiCube">{i.kanji}</p>
         ))}
-        </>
+        </div>
     )
 }
 
