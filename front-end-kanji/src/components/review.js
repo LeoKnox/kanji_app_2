@@ -22,7 +22,7 @@ const Review = (test) => {
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
                 console.log(quizList);
             })
-        }, [grades.id]);
+        }, []);
 
         function red() {
             console.log("red");
