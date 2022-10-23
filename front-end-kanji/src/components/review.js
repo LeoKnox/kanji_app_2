@@ -7,8 +7,6 @@ const Review = (test) => {
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
 
-    //console.log(test.grades[0] ? console.log("r true") : console.log("r false"));
-
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
         axios.get(x)
@@ -25,6 +23,10 @@ const Review = (test) => {
                 console.log(quizList);
             })
         }, [grades.id]);
+
+        function red() {
+            console.log("red");
+        }
 
     return (
         <>
