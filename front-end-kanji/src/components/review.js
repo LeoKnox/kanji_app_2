@@ -10,7 +10,7 @@ const Review = (test) => {
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
-        axios.get(x)
+        let y = axios.get(x)
             .then(function (response) {
                 setAllKanji(response.data);
             })
@@ -19,15 +19,15 @@ const Review = (test) => {
             })
             .then(function check() {
                 red();
-                console.log("allKanji"+allKanji);
+                newAnswer();
                 //const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 //setQuiz(quizList);
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
             })
             .then(function () {
                 console.log("next"+quiz);
-                newAnswer();
             })
+        console.log('y' + y);
         }, [answer]);
 
         function newAnswer() {
