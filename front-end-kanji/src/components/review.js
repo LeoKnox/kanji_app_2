@@ -6,6 +6,7 @@ const Review = (test) => {
     const grades = useParams();
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
+    const [answer, setAnswer] = useState("");
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
@@ -22,7 +23,7 @@ const Review = (test) => {
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
                 console.log(quizList);
             })
-        }, []);
+        }, [answer]);
 
         function red() {
             console.log("red");
