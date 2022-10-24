@@ -54,6 +54,10 @@ body {
   margin: 20px auto;
 }
 
+.indexWrapper :hover {
+  background-color: gold;
+}
+
 .kanjiWrapper {
   display: grid;
   grid-template-columns: auto auto auto;
