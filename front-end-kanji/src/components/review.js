@@ -20,10 +20,13 @@ const Review = (test) => {
             .then(function check() {
                 red();
                 console.log("allKanji"+allKanji);
-                newAnswer();
                 //const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 //setQuiz(quizList);
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
+            })
+            .then(function () {
+                newAnswer();
+                console.log("next"+quiz);
             })
         }, [answer]);
 
