@@ -13,6 +13,7 @@ const Review = (test) => {
         axios.get(x)
             .then(function (response) {
                 setAllKanji(response.data);
+                console.log("allKanji"+allKanji);
             })
             .catch(function (error) {
                 console.log(error);
@@ -21,7 +22,7 @@ const Review = (test) => {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 setQuiz(quizList);
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
-                console.log(quizList);
+                console.log("quiz"+quizList);
             })
         }, [answer]);
 
