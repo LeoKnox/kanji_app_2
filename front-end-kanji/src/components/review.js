@@ -37,11 +37,14 @@ const Review = (test) => {
         }
 
     return (
+        <>
+        <h1 class="answer">{answer}</h1>
         <div className="indexWrapper">
         {quiz.map((i) => (
             <p className="kanjiCube">{i.kanji}</p>
         ))}
         </div>
+        </>
     )
 }
 
