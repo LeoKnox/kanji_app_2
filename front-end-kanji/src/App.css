@@ -111,10 +111,11 @@ footer {
   background-color: gold;
   border-radius: 25px;
   padding: 10px;
-  margin: 15px 0px;
+  margin: 20px auto;
   color: mediumblue;
   grid-row: 2;
   grid-column: 2;
+  width: 60%;
 }
 
 #kanjiTitle {
