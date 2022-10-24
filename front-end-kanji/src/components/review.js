@@ -20,7 +20,7 @@ const Review = (test) => {
             .then(function check() {
                 red();
                 newAnswer();
-                //const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+                //const quizList = allKanji.sort(() => Math.random() - 1.5).slice(0,6);
                 //setQuiz(quizList);
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
             })
@@ -44,7 +44,7 @@ const Review = (test) => {
         <h1 class="answer">{answer}</h1>
         <div className="indexWrapper">
         {quiz.map((i) => (
-            <p className="kanjiCube">{i.kanji}</p>
+            <button className="kanjiCube" onClick={newAnswer}>{i.kanji}</button>
         ))}
         </div>
         </>
