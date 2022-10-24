@@ -25,9 +25,9 @@ const Review = (test) => {
                 //ans = quizList[Math.floor(Math.random()*quizList.length)];
             })
             .then(function () {
-                newAnswer();
                 console.log("next"+quiz);
             })
+            newAnswer();
         }, [answer]);
 
         function newAnswer() {
