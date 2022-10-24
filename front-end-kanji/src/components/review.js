@@ -26,8 +26,8 @@ const Review = (test) => {
             })
             .then(function () {
                 console.log("next"+quiz);
+                newAnswer();
             })
-            newAnswer();
         }, [answer]);
 
         function newAnswer() {
