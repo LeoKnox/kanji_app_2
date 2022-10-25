@@ -21,15 +21,9 @@ const Index = () => {
             nums = e.target.value;
             gradeArray[0] = true;
             setGrades(gradeArray);
-            console.log("ga2"+grades);
+            console.log("ga2"+e.target);
         }
         navigate(`/index/review/${nums}`);
-    }
-
-    function UpdateComponent(e) {
-        //e.preventDefault();
-        //setGrades([true])
-        //return (<Test peas={grades} />);
     }
 
     // FUTURE change axios call to return array not array of objects
@@ -51,7 +45,7 @@ const Index = () => {
             <ul>
                 {numbers.map((number, index) => (
                     <li>
-                        <input type="checkbox" value={index} onClick={SetGrade} />
+                        <input key={index} type="checkbox" value={index} onClick={SetGrade} />
                         {number}
                     </li>
                 ))}
