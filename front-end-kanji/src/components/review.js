@@ -17,17 +17,9 @@ const Review = (test) => {
             .catch(function (error) {
                 console.log(error);
             })
-            .then(function check() {
-                red();
-                newAnswer();
-                //const quizList = allKanji.sort(() => Math.random() - 1.5).slice(0,6);
-                //setQuiz(quizList);
-                //ans = quizList[Math.floor(Math.random()*quizList.length)];
-            })
             .then(function () {
-                console.log("next"+quiz);
+                newAnswer();
             })
-        console.log('y' + y);
         }, [answer]);
 
         function newAnswer() {
