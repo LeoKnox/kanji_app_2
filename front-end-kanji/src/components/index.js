@@ -19,9 +19,8 @@ const Index = () => {
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (nums === "") {
             nums = e.target.value;
-            gradeArray[e.target.value] = true;
+            gradeArray[0] = true;
             setGrades(gradeArray);
-            e.target.checked = true;
             console.log("ga2"+grades);
         }
         navigate(`/index/review/${nums}`);
