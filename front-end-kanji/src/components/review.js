@@ -20,7 +20,7 @@ const Review = (test) => {
             .then(function () {
                 newAnswer();
             })
-        }, [answer]);
+        }, [grades.id]);
 
         function newAnswer() {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
