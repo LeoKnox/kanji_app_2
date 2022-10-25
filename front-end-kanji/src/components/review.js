@@ -9,7 +9,6 @@ const Review = (test) => {
     const [answer, setAnswer] = useState("one");
 
     useEffect(() => {
-        console.log("g.id:"+grades.id);
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
         axios.get(x)
             .then(function (response) {
