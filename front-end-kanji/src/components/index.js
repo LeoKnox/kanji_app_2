@@ -15,13 +15,11 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        console.log("ga"+gradeArray);
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (nums === "") {
             nums = e.target.value;
             gradeArray[0] = true;
             setGrades(gradeArray);
-            console.log("ga2"+e.target);
         }
         navigate(`/index/review/${nums}`);
     }
