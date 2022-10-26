@@ -6,7 +6,7 @@ const Review = (test) => {
     const grades = useParams();
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
-    const [answer, setAnswer] = useState("one");
+    const [answer, setAnswer] = useState([]);
 
     useEffect(() => {
         const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
@@ -30,6 +30,8 @@ const Review = (test) => {
             }
             //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+            setAnswer([quizList[1]]);
+            console.log(quiz);
             console.log(JSON.stringify(quizList[0]));
             setQuiz(quizList);
         }
