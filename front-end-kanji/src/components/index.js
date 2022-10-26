@@ -15,6 +15,7 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
+        console.log(grades+":"+gradeArray.count(1));
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (nums === "") {
             nums = e.target.value;
