@@ -22,7 +22,12 @@ const Review = (test) => {
             })
         }, [grades.id]);
 
-        function newAnswer(e=0) {
+        function newAnswer(e) {
+            if (e === null) {
+                console.log("null");
+            } else {
+                console.log("true");
+            }
             console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
             setQuiz(quizList);
