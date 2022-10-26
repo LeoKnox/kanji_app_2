@@ -30,6 +30,7 @@ const Review = (test) => {
             }
             //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+            console.log(JSON.stringify(quizList[0]));
             setQuiz(quizList);
         }
 
@@ -42,7 +43,7 @@ const Review = (test) => {
         <h1 className="answer">{answer}</h1>
         <div className="indexWrapper">
         {quiz.map((i) => (
-            <button className="kanjiCube" value={i.id} onClick={newAnswer}>{i.kanji}</button>
+            <button className="kanjiCube" value={i.idkanji_dict} onClick={newAnswer}>{i.kanji}</button>
         ))}
         </div>
         </>
