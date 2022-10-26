@@ -78,6 +78,9 @@ footer {
   background-color: #333333;
   color: white;
   padding: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .nav {
