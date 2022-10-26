@@ -22,8 +22,8 @@ const Review = (test) => {
             })
         }, [grades.id]);
 
-        function newAnswer(e) {
-            //console.log("id"+e.target.value);
+        function newAnswer(e=0) {
+            console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
             setQuiz(quizList);
         }
