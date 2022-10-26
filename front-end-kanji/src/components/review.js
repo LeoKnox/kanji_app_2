@@ -23,10 +23,10 @@ const Review = (test) => {
         }, [grades.id]);
 
         function newAnswer(e) {
-            if (e === null) {
+            if (e === undefined) {
                 console.log("null");
             } else {
-                console.log("true");
+                console.log("true"+e.target.value);
             }
             //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
