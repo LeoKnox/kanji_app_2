@@ -23,7 +23,7 @@ const Review = (test) => {
         }, [grades.id]);
 
         function newAnswer(e) {
-            console.log("id"+e.target.value);
+            //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
             setQuiz(quizList);
         }
@@ -34,7 +34,7 @@ const Review = (test) => {
 
     return (
         <>
-        <h1 class="answer">{answer}</h1>
+        <h1 className="answer">{answer}</h1>
         <div className="indexWrapper">
         {quiz.map((i) => (
             <button className="kanjiCube" value={i.id} onClick={newAnswer}>{i.kanji}</button>
