@@ -33,8 +33,8 @@ const Review = (test) => {
             setQuiz(quizList);
             console.log(quiz+"quiz");
             //console.log("***"+JSON.stringify([quizList[1]]));
-            setAnswer([quiz]);
-            //console.log(quiz);
+            setAnswer([quiz[1].idkanji_dict]);
+            console.log(quiz);
             //console.log(answer+")))");
             //setQuiz(quizList);
         }
