@@ -28,12 +28,10 @@ const Review = (test) => {
             } else {
                 console.log("true");
             }
-            console.log(`${answer[0]}:${answer[1]}`);
-            console.log(`${answer[1]}-${e.target.value}`);
             if (answer[1] == e.target.value) {
                 console.log("correct!!!")
             } else {
-                console.log(e.target.value);
+                return;
             }
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
             let pick = Math.floor(Math.random()*quizList.length);
