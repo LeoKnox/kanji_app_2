@@ -30,10 +30,10 @@ const Review = (test) => {
             }
             //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+            setAnswer([quizList[1].meaning]);
             setQuiz(quizList);
             console.log(quiz+"quiz");
             //console.log("***"+JSON.stringify([quizList[1]]));
-            setAnswer([quiz[1].meaning]);
             console.log(`answer: ${answer}`);
             //console.log(answer+")))");
             //setQuiz(quizList);
