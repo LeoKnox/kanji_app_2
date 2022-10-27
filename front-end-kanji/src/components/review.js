@@ -28,7 +28,9 @@ const Review = (test) => {
             } else {
                 console.log("true");
             }
-            if (answer[1] === e.target.value) {
+            console.log(`${answer[0]}:${answer[1]}`);
+            console.log(`${answer[1]}-${e.target.value}`);
+            if (answer[1] == e.target.value) {
                 console.log("correct!!!")
             } else {
                 console.log(e.target.value);
