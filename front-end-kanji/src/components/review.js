@@ -31,8 +31,9 @@ const Review = (test) => {
             //console.log("id"+e.target.value);
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
             setQuiz(quizList);
+            console.log(quiz+"quiz");
             //console.log("***"+JSON.stringify([quizList[1]]));
-            //setAnswer([quizList[1]]);
+            setAnswer([quiz]);
             //console.log(quiz);
             //console.log(answer+")))");
             //setQuiz(quizList);
