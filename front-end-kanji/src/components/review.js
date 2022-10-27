@@ -28,15 +28,15 @@ const Review = (test) => {
             } else {
                 console.log("true"+e.target.value);
             }
-            //console.log("id"+e.target.value);
+            if (answer === e.target.value) {
+                console.log("correct!!!")
+            } else {
+                console.log(e.target.value);
+            }
             const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
-            setAnswer([quizList[1].meaning]);
+            let pick = Math.floor(Math.random()*quizList.length);
+            setAnswer([quizList[pick].meaning]);
             setQuiz(quizList);
-            console.log(quiz+"quiz");
-            //console.log("***"+JSON.stringify([quizList[1]]));
-            console.log(`answer: ${answer}`);
-            //console.log(answer+")))");
-            //setQuiz(quizList);
         }
 
         function red() {
