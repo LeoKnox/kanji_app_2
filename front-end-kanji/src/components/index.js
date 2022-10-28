@@ -19,7 +19,7 @@ const Index = () => {
         grades.every(g => g === true);
         if (grades.indexOf(true) === -1) {
             console.log("is true it's -1");
-            gradeArray[e.target.value] = true;
+            gradeArray[e.target.checked] = true;
             setGrades(gradeArray);
             console.log(`${grades} our grades`);
         }
