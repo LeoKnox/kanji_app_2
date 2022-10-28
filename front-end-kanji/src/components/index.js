@@ -15,7 +15,8 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        console.log(grades.indexOf(true));
+        console.log(grades.indexOf(false));
+        grades.every(g => g === true);
         if (grades.indexOf(true) === -1) {
             console.log("is true it's -1");
             gradeArray[e.target.value] = true;
