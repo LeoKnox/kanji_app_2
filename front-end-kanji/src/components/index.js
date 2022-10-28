@@ -20,12 +20,13 @@ const Index = () => {
         if (grades.indexOf(true) === -1) {
             //console.log("is true it's -1");
             e.target.checked = true;
+            nums = e.target.value + 1;
             setGrades(gradeArray);
             //console.log(`${grades} our grades`);
         }
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (nums === "") {
-            nums = e.target.value;
+            //nums = e.target.value;
             //gradeArray[0] = true;
             setGrades(gradeArray);
             //console.log(`ga: ${gradeArray}`);
