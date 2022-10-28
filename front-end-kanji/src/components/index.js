@@ -15,20 +15,20 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
-        console.log(grades.filter(g => g === true));
-        grades.every(g => g === true);
+        //console.log(grades.filter(g => g === true));
+        //grades.every(g => g === true);
         if (grades.indexOf(true) === -1) {
-            console.log("is true it's -1");
+            //console.log("is true it's -1");
             e.target.checked = true;
             setGrades(gradeArray);
-            console.log(`${grades} our grades`);
+            //console.log(`${grades} our grades`);
         }
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (nums === "") {
             nums = e.target.value;
-            gradeArray[0] = true;
+            //gradeArray[0] = true;
             setGrades(gradeArray);
-            console.log(`ga: ${gradeArray}`);
+            //console.log(`ga: ${gradeArray}`);
         }
         navigate(`/index/review/${nums}`);
     }
