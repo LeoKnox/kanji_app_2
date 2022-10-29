@@ -16,8 +16,8 @@ const Index = () => {
         setGrades(gradeArray);
         if (grades.indexOf(true) === -1) {
             e.target.checked = true;
-            gradeArray[e.target.value-1] = true;
-            nums = Number(e.target.value) + 1;
+            gradeArray[e.target.value] = true;
+            nums = Number(e.target.value);
             setGrades(gradeArray);
             console.log(`gradeArray ${gradeArray}`);
             console.log(`nums: ${nums}`);
