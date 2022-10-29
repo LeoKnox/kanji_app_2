@@ -24,6 +24,7 @@ const Review = (test) => {
         }, [grades.id]);
 
         function newAnswer(e) {
+            /*
             if (e === undefined) {
                 console.log("null");
             } else if (answer[1] == e.target.value) {
@@ -31,10 +32,13 @@ const Review = (test) => {
             } else {
                 return;
             }
-            const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
-            let pick = Math.floor(Math.random()*quizList.length);
-            setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict]);
-            setQuiz(quizList);
+            */
+           if ((e === undefined) || (answer[1] == e.target.value)) {
+                const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+                let pick = Math.floor(Math.random()*quizList.length);
+                setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict]);
+                setQuiz(quizList);
+           }
         }
 
     return (
