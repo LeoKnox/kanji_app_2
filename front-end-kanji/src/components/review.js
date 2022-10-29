@@ -36,10 +36,6 @@ const Review = (test) => {
             setQuiz(quizList);
         }
 
-        function red() {
-            console.log("red");
-        }
-
     return (
         <>
         <h1 className="answer">{answer[0]}</h1>
