@@ -25,10 +25,7 @@ const Review = (test) => {
         function newAnswer(e) {
             if (e === undefined) {
                 console.log("null");
-            } else {
-                console.log("true");
-            }
-            if ((e !== undefined) && (answer[1] == e.target.value)) {
+            } else if (answer[1] == e.target.value) {
                 console.log("correct!!!")
             } else {
                 return;
