@@ -28,7 +28,7 @@ const Review = (test) => {
             } else {
                 console.log("true");
             }
-            if (answer[1] == e.target.value) {
+            if ((e !== undefined) && (answer[1] == e.target.value)) {
                 console.log("correct!!!")
             } else {
                 return;
