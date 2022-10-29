@@ -13,6 +13,7 @@ const Review = (test) => {
         axios.get(x)
             .then(function (response) {
                 setAllKanji(response.data);
+                console.log(`axios get ${allKanji}`);
             })
             .catch(function (error) {
                 console.log(error);
