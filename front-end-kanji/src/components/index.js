@@ -20,11 +20,7 @@ const Index = () => {
             gradeArray[e.target.value] = true;
             nums = Number(e.target.value)+1;
             setGrades(gradeArray);
-            console.log(`gradeArray ${gradeArray}`);
-            console.log(`nums: ${nums}`);
         }
-        console.log(`gradeArray ${gradeArray}`);
-        console.log(`nums: ${nums}`);
         navigate(`/index/review/${nums}`);
     }
 
