@@ -22,10 +22,9 @@ const Index = () => {
             console.log(`gradeArray ${gradeArray}`);
             console.log(`nums: ${nums}`);
         }
-        gradeArray.map((v, i) =>v ? nums += i+"1" : null);
-        if (nums === "") {
-            setGrades(gradeArray);
-        }
+        gradeArray.map((v, i) =>v ? nums += i+1 : null);
+        console.log(`gradeArray ${gradeArray}`);
+        console.log(`nums: ${nums}`);
         navigate(`/index/review/${nums}`);
     }
 
