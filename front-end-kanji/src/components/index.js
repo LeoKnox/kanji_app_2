@@ -14,15 +14,15 @@ const Index = () => {
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
         setGrades(gradeArray);
+        gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (grades.indexOf(true) === -1) {
             e.target.checked = true;
             gradeArray[e.target.value] = true;
-            nums = Number(e.target.value);
+            nums = Number(e.target.value)+1;
             setGrades(gradeArray);
             console.log(`gradeArray ${gradeArray}`);
             console.log(`nums: ${nums}`);
         }
-        gradeArray.map((v, i) =>v ? nums += i+1 : null);
         console.log(`gradeArray ${gradeArray}`);
         console.log(`nums: ${nums}`);
         navigate(`/index/review/${nums}`);
