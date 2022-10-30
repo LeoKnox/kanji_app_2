@@ -49,7 +49,7 @@ const Index = () => {
                 {numbers.map((number, index) => (
                     <li>
                         <input key={index} type="checkbox" value={index} onClick={SetGrade} />
-                        {number}
+                        {number} i = {index}
                     </li>
                 ))}
             </ul>
