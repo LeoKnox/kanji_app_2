@@ -7,6 +7,7 @@ import Test from './test.js';
 const Index = () => {
     const [numbers, setNumbers] = useState([]);
     const [grades, setGrades] = useState([]);
+    const [bold, setBold] = useState("bold");
     const navigate = useNavigate();
 
     function SetGrade(e) {
@@ -42,9 +43,9 @@ const Index = () => {
         <div id="horz-list">
             <ul>
                 {numbers.map((number, index) => (
-                    <li>
+                    <li style="font-weight:bold;">
                         <input key={index} type="checkbox" value={index} onClick={SetGrade} />
-                        {number} i = {index}
+                        {number}
                     </li>
                 ))}
             </ul>
