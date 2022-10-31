@@ -7,13 +7,14 @@ import Test from './test.js';
 const Index = () => {
     const [numbers, setNumbers] = useState([]);
     const [grades, setGrades] = useState([]);
-    //const [bold, setBold] = useState("bold");
+    const [bold, setBold] = useState("normal");
     const navigate = useNavigate();
 
     function SetGrade(e) {
         let gradeArray = grades;
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
+        e.target.fontWeight = "bold";
         setGrades(gradeArray);
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (grades.indexOf(true) === -1) {
@@ -43,7 +44,7 @@ const Index = () => {
         <div id="horz-list">
             <ul>
                 {numbers.map((number, index) => (
-                    <li style={{fontWeight:'bold'}}>
+                    <li style={{fontWeight:bold}}>
                         <input key={index} type="checkbox" value={index} onClick={SetGrade} />
                         {number}
                     </li>
