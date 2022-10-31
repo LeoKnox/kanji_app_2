@@ -14,7 +14,7 @@ const Index = () => {
         let gradeArray = grades;
         let nums = "";
         e.target.checked ? gradeArray[e.target.value] = true : gradeArray[e.target.value] = false;
-        e.target.fontWeight = "bold";
+        setBold("bold");
         setGrades(gradeArray);
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (grades.indexOf(true) === -1) {
