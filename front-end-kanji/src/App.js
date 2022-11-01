@@ -15,7 +15,7 @@ function App() {
         <Route path="/quiz/" element={<Game meters="home" error="noGrades" />} />
         <Route path="/about/" element={<Game meters="about" />} />
         <Route path="/index/" element={<Index />}>
-          <Route path="review" element={<Review />} />
+          <Route path="review/:id/" element={<Review />} />
         </Route> 
       </Routes>
     </BrowserRouter>
