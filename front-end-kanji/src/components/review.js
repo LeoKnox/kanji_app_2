@@ -9,8 +9,8 @@ const Review = () => {
     const [answer, setAnswer] = useState([]);
 
     useEffect(() => {
-        const x = `http://127.0.0.1:8000/quiz/${grades.id}`;
-        axios.get(x)
+        const gradeLink = `http://127.0.0.1:8000/quiz/${grades.id}`;
+        axios.get(gradeLink)
             .then(function (response) {
                 setAllKanji(response.data);
                 const quizList = response.data.sort(() => Math.random() - 0.5).slice(0,6);
