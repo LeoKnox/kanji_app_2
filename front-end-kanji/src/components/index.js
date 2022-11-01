@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
+import About from '../about.js';
 import axios from 'axios';
 import Footer from "./footer.js";
-import Test from './test.js';
 
 const Index = () => {
     const [numbers, setNumbers] = useState([]);
@@ -51,6 +51,7 @@ const Index = () => {
         </div>
         <h1 id="kanjiTitle">Kanji Trainer</h1>
         <Outlet />
+        <button onClick={() => navigate('/about/')}>About</button>
         <Footer />
         </>
     )
