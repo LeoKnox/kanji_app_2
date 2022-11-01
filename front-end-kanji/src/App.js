@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Game meters="home" />} />
+        <Route path="/" element={<Index />} />
         <Route path="/home/" element={<Game meters="home" />} />
         <Route path="/quiz/:id/" element={<Game grades="1" meters="quiz" />} />
         <Route path="/quiz/" element={<Game meters="home" error="noGrades" />} />
