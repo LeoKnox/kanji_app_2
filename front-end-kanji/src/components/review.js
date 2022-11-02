@@ -7,6 +7,7 @@ const Review = () => {
     const [quiz, setQuiz] = useState([]);
     const [allKanji, setAllKanji] = useState([]);
     const [answer, setAnswer] = useState([]);
+    const [translation, setTranslation] = useState("?");
 
     useEffect(() => {
         const gradeLink = `http://127.0.0.1:8000/quiz/${grades.id}`;
@@ -34,7 +35,7 @@ const Review = () => {
 
     return (
         <>
-        <h1 className="answer">{answer[0]}</h1>
+        <h1 className="answer">{answer[0]} : {translation}</h1>
         <div className="indexWrapper">
         {quiz.map((i) => (
             <button className="kanjiCube" value={i.idkanji_dict} onClick={newAnswer}>{i.kanji}</button>
