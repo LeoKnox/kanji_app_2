@@ -31,11 +31,11 @@ const Review = () => {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 let pick = Math.floor(Math.random()*quizList.length);
                 console.log(`qL ${quizList[pick]}`);
-                setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, quizList[pick].reading]);
                 console.log(`2nd ${answer[2]}`);
                 setQuiz(quizList);
                 setTimeout(function() {
                     setTranslation("?");
+                    setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, quizList[pick].pronounciation]);
                 }, 5000);
             }
         }
