@@ -43,8 +43,8 @@ const Review = () => {
 
     return (
         <>
-        <h1 className="answer">{answer[0]} : {translation}</h1>
-        <h3>{translation}</h3>
+        <h1 className="answer">{answer[0]}</h1>
+        <h2 className="answer">{translation}</h2>
         <div className="indexWrapper">
         {quiz.map((i) => (
             <button className="kanjiCube" value={i.idkanji_dict} onClick={newAnswer}>{i.kanji}</button>
