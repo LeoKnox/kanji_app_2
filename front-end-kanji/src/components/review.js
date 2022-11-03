@@ -35,7 +35,8 @@ const Review = () => {
                 setQuiz(quizList);
                 setTimeout(function() {
                     setTranslation("?");
-                    setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, quizList[pick].pronounciation]);
+                    let translations = quizList[pick].reading + ":" + quizList[pick].pronounciation;
+                    setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 }, 5000);
             }
         }
@@ -43,6 +44,7 @@ const Review = () => {
     return (
         <>
         <h1 className="answer">{answer[0]} : {translation}</h1>
+        <h3>{translation}</h3>
         <div className="indexWrapper">
         {quiz.map((i) => (
             <button className="kanjiCube" value={i.idkanji_dict} onClick={newAnswer}>{i.kanji}</button>
