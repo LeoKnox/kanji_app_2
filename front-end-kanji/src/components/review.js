@@ -26,6 +26,8 @@ const Review = () => {
 
         function newAnswer(e) {
             if ((e === undefined) || (answer[1] == e.target.value)) {
+                let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
+                setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setTranslation(answer[2]);
                 console.log(`1st ${answer[2]}`);
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
@@ -35,9 +37,7 @@ const Review = () => {
                 setQuiz(quizList);
                 setTimeout(function() {
                     setTranslation("?");
-                    let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                     console.log("tra"+translations);
-                    setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 }, 5000);
             }
         }
