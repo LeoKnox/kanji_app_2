@@ -35,7 +35,7 @@ const Review = () => {
                 setQuiz(quizList);
                 setTimeout(function() {
                     setTranslation("?");
-                    let translations = quizList[pick].reading + ":" + quizList[pick].pronounciation;
+                    let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                     console.log("tra"+translations);
                     setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 }, 5000);
