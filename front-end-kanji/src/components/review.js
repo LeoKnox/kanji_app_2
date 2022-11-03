@@ -26,12 +26,12 @@ const Review = () => {
 
         function newAnswer(e) {
             if ((e === undefined) || (answer[1] == e.target.value)) {
+                const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
+                let pick = Math.floor(Math.random()*quizList.length);
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setTranslation(answer[2]);
                 console.log(`1st ${answer[2]}`);
-                const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
-                let pick = Math.floor(Math.random()*quizList.length);
                 console.log(`qL ${quizList[pick]}`);
                 console.log(`2nd ${answer[2]}`);
                 setQuiz(quizList);
