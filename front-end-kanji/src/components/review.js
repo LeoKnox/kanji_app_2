@@ -16,8 +16,7 @@ const Review = () => {
                 setAllKanji(response.data);
                 const quizList = response.data.sort(() => Math.random() - 0.5).slice(0,6);
                 let pick = Math.floor(Math.random()*quizList.length);
-                let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
-                setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict], translations);
+                console.log(`axios ${JSON.stringify(answer)}`)
                 setQuiz(quizList);
             })
             .catch(function (error) {
