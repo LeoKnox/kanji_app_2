@@ -27,15 +27,15 @@ const Review = () => {
 
         function newAnswer(e) {
             if (answer[1] == e.target.value) {
+                setTimeout(function() {
+                    setTranslation("?");
+                }, 5000);
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 let pick = Math.floor(Math.random()*quizList.length);
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setTranslation(answer[2]);
                 setQuiz(quizList);
-                setTimeout(function() {
-                    setTranslation("?");
-                }, 5000);
             }
         }
 
