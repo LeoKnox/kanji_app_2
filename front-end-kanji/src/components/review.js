@@ -25,16 +25,20 @@ const Review = () => {
             })
         }, [grades.id]);
 
+        function test() {
+            setTimeout(() => {
+                setTranslation("?");
+            }, 5000);
+        }
+
         function newAnswer(e) {
             if (answer[1] == e.target.value) {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 let pick = Math.floor(Math.random()*quizList.length);
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
-                setTimeout(function() {
-                    setTranslation("?");
-                }, 5000);
                 setTranslation(answer[2]);
+                test();
                 setQuiz(quizList);
             }
         }
