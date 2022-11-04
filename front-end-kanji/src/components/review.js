@@ -31,10 +31,10 @@ const Review = () => {
                 let pick = Math.floor(Math.random()*quizList.length);
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
-                setTranslation(answer[2]);
                 setTimeout(function() {
                     setTranslation("?");
                 }, 5000);
+                setTranslation(answer[2]);
                 setQuiz(quizList);
             }
         }
