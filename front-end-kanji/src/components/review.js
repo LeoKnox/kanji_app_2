@@ -34,13 +34,13 @@ const Review = () => {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
                 let pick = Math.floor(Math.random()*quizList.length);
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
-                setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setTranslation(answer[2]);
                 setTimeout(() => {
+                    setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
+                    setQuiz(quizList);
                     setTranslation("?");
                 }, 5000);
                 console.log("blue");
-                setQuiz(quizList);
             }
         }
 
