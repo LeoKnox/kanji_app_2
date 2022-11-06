@@ -27,9 +27,6 @@ const Review = () => {
         }, [grades.id]);
 
         function test() {
-            setTimeout(() => {
-                setTranslation("?");
-            }, 5000);
         }
 
         function newAnswer(e) {
@@ -39,7 +36,10 @@ const Review = () => {
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setTranslation(answer[2]);
-                test();
+                setTimeout(() => {
+                    setTranslation("?");
+                }, 5000);
+                console.log("blue");
                 setQuiz(quizList);
             }
         }
