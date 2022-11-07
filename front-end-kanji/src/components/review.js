@@ -19,7 +19,6 @@ const Review = () => {
                 let translations = quizList[pick].reading + " : " + quizList[pick].pronounciation;
                 setAnswer([quizList[pick].meaning, quizList[pick].idkanji_dict, translations]);
                 setQuiz(quizList);
-                console.log (quiz);
             })
             .catch(function (error) {
                 console.log(error);
@@ -40,7 +39,6 @@ const Review = () => {
                     setQuiz(quizList);
                     setTranslation("?");
                 }, 5000);
-                console.log("blue");
             }
         }
 
