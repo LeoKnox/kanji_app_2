@@ -16,10 +16,15 @@ const Index = () => {
         setGrades(gradeArray);
         gradeArray.map((v, i) =>v ? nums += i+1 : null);
         if (grades.indexOf(true) === -1) {
+            navigate(`/index/`);
+            /*
+            prevents all items from being checked, decided redirecting to index is better user experience
             e.target.checked = true;
             gradeArray[e.target.value] = true;
             nums = Number(e.target.value)+1;
             setGrades(gradeArray);
+            */
+            return;
         }
         navigate(`/index/review/${nums}`);
     }
