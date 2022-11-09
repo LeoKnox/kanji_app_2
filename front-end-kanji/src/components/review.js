@@ -25,9 +25,6 @@ const Review = () => {
             })
         }, [grades.id]);
 
-        function test() {
-        }
-
         function newAnswer(e) {
             if (answer[1] == e.target.value) {
                 const quizList = allKanji.sort(() => Math.random() - 0.5).slice(0,6);
